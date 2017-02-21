@@ -75,19 +75,21 @@ def map_reads(fasta, fastq):
 					pos = get_short_string_position(read, sequence)
 					if pos is not None:
 						#print "match!"
-						print "{0},{1},{2},{3}".format(
+						print "{0},{1},{2},{3},{4}".format(
 							read_name,
 							contig,
 							sequence,
-							"+")
+							"+",
+							pos)
 					pos = get_short_string_position(reverse_read, sequence)
 					if pos is not None:
 						#print "reverse match!"
-						print "{0},{1},{2},{3}".format(
+						print "{0},{1},{2},{3},{4}".format(
 							read_name,
 							contig,
 							sequence,
-							"-")
+							"-", 
+							pos)
 					
 
 if __name__ == "__main__":
